@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(to right, #e2cbda, #bfd8d9);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+
+      .container {
+        text-align: center;
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+
+      h1 {
+        color: red;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>An Error occured!</h1>
+      <p>{{message}}</p>
+    </div>
+  </body>
+</html>

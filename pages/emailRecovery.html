@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verification Success</title>
+  <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(to right, #e2cbda, #bfd8d9);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        box-sizing: border-box;
+      }
+
+      .container {
+        text-align: center;
+        background-color: white;
+        padding: 40px 30px;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+
+      h1 {
+        color: #4caf50;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: #333;
+        font-size: 16px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+      }
+
+      a {
+        text-decoration: none;
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 25px;
+        border-radius: 6px;
+        font-size: 18px;
+        display: inline-block;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      a:hover {
+        background-color: black;
+        transform: translateY(-2px);
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Email Restored Successfully!</h1>
+    <p>Password reset confirmation sent to {{email}}.</p>
+  </div>
+</body>
+</html>

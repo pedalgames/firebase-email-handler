@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Email Actions Handler</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+      h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      nav {
+        background-color: #343a40;
+        display: flex;
+        justify-content: center;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        text-align: center;
+        font-size: 1.1rem;
+        transition: background-color 0.3s;
+      }
+      nav a:hover {
+        background-color: #007bff;
+      }
+      .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .section {
+        margin-bottom: 40px;
+      }
+      h2 {
+        color: #007bff;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+      p,
+      ul {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
+      ul {
+        list-style-type: square;
+        padding-left: 20px;
+      }
+      code {
+        background-color: #f8f9fa;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      .steps {
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Firebase Email Actions Handler</h1>
+      <p>
+        A Node.js app to automate Firebase email actions like password reset and
+        email verification
+      </p>
+    </header>
+
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#usage">Usage</a>
+      <a href="#installation">Installation</a>
+      <a href="#docker">Docker Hosting</a>
+      <a href="#license">License</a>
+    </nav>
+
+    <div class="container">
+      <section id="usage" class="section">
+        <h2>Introduction</h2>
+
+        <p>
+          A minimal Node.js application that wraps Firebase Authentication to
+          handle email actions like password reset, email verification, and
+          email recovery. Built with Express.js and Firebase, this app automates
+          the process of handling these emails, saving time and effort in any
+          Firebase-related projects.
+        </p>
+      </section>
+
+      <section id="features" class="section">
+        <h2>Features</h2>
+        <ul>
+          <li>
+            <strong>Automates Firebase Email Actions:</strong> Handles password
+            reset, email verification, and email recovery.
+          </li>
+          <li>
+            <strong>Express.js API:</strong> Lightweight server for routing.
+          </li>
+          <li>
+            <strong>Pre-built HTML Templates:</strong> For common email actions.
+          </li>
+          <li>
+            <strong>Reusable:</strong> Easily integrate into other
+            Firebase-based apps.
+          </li>
+          <li>
+            <strong>Self-hostable:</strong> Dockerized for easy deployment and
+            scaling.
+          </li>
+        </ul>
+      </section>
+
+      <section id="usage" class="section">
+        <h2>Usage</h2>
+        <p>
+          This app automates the handling of Firebase email actions (like
+          password reset or email verification).
+        </p>
+        <p>
+          If you prefer not to set up your own server, you can use the hosted
+          version. Just follow these steps:
+        </p>
+
+        <div class="steps">
+          <h3>1. Create a Firebase Project</h3>
+          <p>Go to the Firebase console and create a new Firebase project.</p>
+          <h3>2. Enable Email/Password Authentication</h3>
+          <p>
+            Navigate to <strong>Authentication</strong> >
+            <strong>Sign-in method</strong> > <strong>Email/Password</strong>,
+            and enable it.
+          </p>
+          <h3>3. Add Your Node.js App URL to Firebase</h3>
+          <p>
+            In the Firebase console, go to <strong>Settings</strong> >
+            <strong>Authorized Domains</strong>, and add your Node.js
+            application URL (either my hosted URL or your custom domain).
+          </p>
+          <h3>4. Update Action URL in Firebase Console</h3>
+          <p>
+            In the <strong>Templates</strong> section of Firebase
+            Authentication, click the <strong>edit icon</strong> for the email
+            actions.
+          </p>
+          <p>Customize the action URL by entering the following format:</p>
+          <pre><code>https://your-nodejs-hosting-url/__/auth/action</code></pre>
+          <p>Save the settings.</p>
+        </div>
+      </section>
+
+      <section id="installation" class="section">
+        <h2>Installation</h2>
+        <p>To install and run the app locally, follow these steps:</p>
+
+        <div class="steps">
+          <h3>1. Clone the Repo:</h3>
+          <pre><code>$ git clone https://github.com/samay15jan/firebase-email-handler</code></pre>
+          <h3>2. Install Dependencies:</h3>
+          <pre><code>$ cd firebase-email-handler && npm install</code></pre>
+          <h3>3. Run the App:</h3>
+          <pre><code>$ npm start</code></pre>
+        </div>
+      </section>
+
+      <section id="docker" class="section">
+        <h2>Hosting Your Own Dockerized Version</h2>
+        <p>
+          You can also deploy your own instance of the app by running it in a
+          Docker container. Here's how:
+        </p>
+
+        <div class="steps">
+          <h3>1. Clone the Repo:</h3>
+          <pre><code>$ git clone https://github.com/samay15jan/firebase-email-handler</code></pre>
+          <h3>2. Build the Docker Image:</h3>
+          <pre><code>$ cd firebase-email-handler</code></pre>
+          <pre><code>$ docker build -t firebase-email-handler .</code></pre>
+          <h3>3. Push to Docker Hub (Optional):</h3>
+          <pre><code>$ docker push your-dockerhub-username/firebase-email-handler</code></pre>
+          <h3>4. Run the Docker Container:</h3>
+          <pre><code>$ docker run -p 3000:3000 firebase-email-handler</code></pre>
+          <h3>5. Deploy to Cloud Hosting:</h3>
+          <p>
+            You can use cloud platforms such as <strong>Render</strong>,
+            <strong>Google Cloud</strong>, or <strong>Azure</strong> to deploy
+            your Docker container.
+          </p>
+        </div>
+      </section>
+
+      <section id="license" class="section">
+        <h2>License</h2>
+        <p>
+          MIT License
+          <a
+            href="https://github.com/samay15jan/firebase-email-handler/blob/main/License"
+            >here</a
+          >
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
