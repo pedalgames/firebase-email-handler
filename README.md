@@ -41,12 +41,12 @@ Once your Node.js app is up and running, you need to configure the Firebase auth
 1. **Firebase Initialization**
    Initialize Firebase in your frontend application. You can follow the [Firebase documentation](https://firebase.google.com/docs/web/setup) for this.
 
-2. **Set Email Action URL in Firebase**
-   In your frontend code, you only need to set the Firebase email action URLs to point to your Node.js app:
+2. **Set your Continue URL** [OPITONAL]
+   In your frontend code, you only need to set your web app url for your node.js applicaiton to point back to your main app:
 
    ```javascript
    const actionCodeSettings = {
-     url: "https://your-nodejs-hosting-url", // Replace with your hosted Node.js app URL
+     url: "https://your-web-app-url", // Replace with with your main application url [ContinueURL]
    };
    ```
 
