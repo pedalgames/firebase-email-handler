@@ -76,9 +76,11 @@ To install and run the app locally, follow these steps:
    $ npm start
    ```
 
+A Docker image for this project can be found at [Docker Hub](https://hub.docker.com/repository/docker/samay15jan/firebase-email-handler/general)
+
 #### Hosting Your Own Dockerized Version
 
-You can also deploy your own instance of the app by running it in a Docker container. Here's how:
+You can also deploy your own instance of the app by running it in a Docker container:
 
 1. **Clone the Repo**
 
