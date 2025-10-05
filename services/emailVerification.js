@@ -18,7 +18,7 @@ module.exports.handleEmailVerification = async (req, res) => {
     const config = {
       apiKey: apiKey,
     };
-    const firebaseApp = initializeApp(config);
+    const firebaseApp = initializeApp(config, apiKey); // Use apiKey as app name to avoid conflicting configurations for the [DEFAULT] app
     const auth = getAuth(firebaseApp);
 
     await applyActionCode(auth, oobCode);

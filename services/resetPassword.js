@@ -36,7 +36,7 @@ module.exports.handlePasswordUpdation = async (req, res) => {
 
   try {
     const config = { apiKey };
-    const firebaseApp = initializeApp(config);
+    const firebaseApp = initializeApp(config, apiKey); // Use apiKey as app name to avoid conflicting configurations for the [DEFAULT] app
     const auth = getAuth(firebaseApp);
 
     await verifyPasswordResetCode(auth, oobCode);

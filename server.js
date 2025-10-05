@@ -13,7 +13,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "pages", "index.html"));
+  if (process.env.NODE_ENV === 'development') {
+    res.sendFile(path.join(__dirname, 'pages', 'index.html'));
+  } else {
+    res.send('');
+  }
 });
 
 app.get("/__/auth/action", (req, res) => {
