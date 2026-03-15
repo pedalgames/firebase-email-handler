@@ -73,7 +73,14 @@ To install and run the app locally, follow these steps:
 
 3. **Run the App:**
    ```bash
+   # Default (uses PORT=3000 unless overridden via the PORT env var)
    $ npm start
+   
+   # Override the port (Linux/macOS)
+   $ PORT=8080 npm start
+   
+   # Override the port (Windows PowerShell)
+   $ $env:PORT=8080; npm start
    ```
 
 A Docker image for this project can be found at [Docker Hub](https://hub.docker.com/repository/docker/samay15jan/firebase-email-handler/general)
@@ -110,7 +117,11 @@ You can also deploy your own instance of the app by running it in a Docker conta
 - You can run the app locally or on your cloud provider (e.g., Google Cloud, Azure, or Render):
 
   ```bash
+  # Default (port 3000)
   $ docker run -p 3000:3000 firebase-email-handler
+  
+  # Override the internal port via PORT env var:
+  $ docker run -e PORT=8080 -p 8080:8080 firebase-email-handler
   ```
 
 5. **Deploy to Cloud Hosting**
