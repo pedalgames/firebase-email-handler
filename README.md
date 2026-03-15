@@ -83,6 +83,8 @@ To install and run the app locally, follow these steps:
    $ $env:PORT=8080; npm start
    ```
 
+> **Note:** The root URL (`/`) serves `pages/index.html` only when `NODE_ENV=development`. In production (or when `NODE_ENV` is not `development`), the root route returns an empty response.
+
 A Docker image for this project can be found at [Docker Hub](https://hub.docker.com/repository/docker/samay15jan/firebase-email-handler/general)
 
 #### Hosting Your Own Dockerized Version
